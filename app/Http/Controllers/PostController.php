@@ -108,8 +108,8 @@ class PostController extends Controller
             'user_id' => auth()->id(), // Assuming the user is authenticated
         ]);
         if ($request->ajax()) {
-            return response()->json(['status'=>true, 'message' => 'Profile updated successfully!']);
-            return response()->json(['post' => $post,'status'=>true, 'message' => 'Profile updated successfully!'], 200);
+            
+            return response()->json(['post' => $post,'status'=>true, 'message' => 'Post added successfully!'], 200);
         }
 
         return redirect()->route('posts.index');
